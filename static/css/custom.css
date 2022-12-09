@@ -1,0 +1,14 @@
+html, body {
+    background-color: #262626;
+    color: #dcf8ff;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #e621af;
+}
+
+section, .scroll-section {
+    height: 100%;
+}
