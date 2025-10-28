@@ -1,0 +1,38 @@
+---
+import Background from '../../assets/background.svg';
+
+const BackgroundSrc = Background.src;
+---
+
+<style define:vars={{ BackgroundSrc: `url(${BackgroundSrc})` }}>
+    .background {
+        background-image: var(--BackgroundSrc);
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+<div class="background w-full min-h-screen flex items-center justify-center p-6">
+    <main
+        role="main"
+        aria-labelledby="maintenance-title"
+        class="w-full max-w-3xl bg-white/80 dark:bg-slate-900/70 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 text-center"
+    >
+
+        <h1 id="maintenance-title" class="text-3xl md:text-4xl font-semibold mb-3 text-slate-900 dark:text-slate-100">
+            Site Under Maintenance
+        </h1>
+
+        <p class="text-slate-700 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+            We're performing scheduled maintenance to improve the site. Thank you for your patience — we should be back online shortly.
+        </p>
+
+        <!-- ETA / progress -->
+        <div class="space-y-2">
+            <div class="flex items-center justify-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                <span class="inline-flex items-center px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-xs">Estimated downtime</span>
+                <strong>~15 days</strong>
+            </div>
+        </div>
+    </main>
+</div>
