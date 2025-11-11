@@ -1,0 +1,22 @@
+---
+const { title, period, icon, line = true } = Astro.props;
+---
+
+<div class="flex flex-col items-center gap-1 pt-3">
+    <div class="text-[#d41132]">
+        <i class={`fa-solid fa-${icon}`}></i>
+    </div>
+    {line ? <div class="w-[1.5px] bg-[#d41132]/30 dark:bg-[#d41132]/50 h-full"></div> : null}
+</div>
+<div class="flex flex-1 flex-col pb-8">
+    <p
+        class="text-slate-800 dark:text-white text-base font-medium leading-normal"
+    >
+        {title}
+    </p>
+    <p
+        class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal"
+    >
+        {period}
+    </p>
+</div>

@@ -1,8 +1,95 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SiteMaintenance from '../components/templates/SiteMaintenance.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/molecules/Navbar.astro";
+import Footer from "../components/molecules/Footer.astro";
+import SkillCard from "../components/molecules/SkillCard.astro";
+import MainButton from "../components/atoms/MainButton.astro";
 ---
 
 <Layout>
-	<SiteMaintenance />
+	<Navbar />
+	<main class="@container mt-20">
+		<div class="@[480px]:p-4">
+			<div
+				class="flex min-h-[calc(100vh-80px)] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+				data-alt="Dynamic anime-style illustration with dark-punk aesthetics"
+				style='background-image: linear-gradient(to top, rgba(34,16,19,0.8) 0%, rgba(34,16,19,0.2) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuARmSHjxz1cEGs-XasC_gR0aVg-dd1PW3lTeVa0Ki9X5FCrNieQsfjpG2rizRT4JuQHdkcNoZkQJl9B7Ag253CagaKT4nVhtKjI5GFHo3rxFprJr9IE0Gac7SJAdzdzSUoAGwFBblNxFNVWj29j1Y_n6cwKYNFEjksj1Cp2lwi8rgFrfWAm4wbBMHHfpQd--W81x3e_kabNf96ykjKXZSPgx-SV5ephnGOJcXPpz4hCDF5KgaMzsF50EM-bCgpRGBpT3RioQP-D8Qk");'
+			>
+				<div class="flex flex-col gap-4 text-center">
+					<h1
+						class="text-white text-5xl font-black leading-tight tracking-widest @[480px]:text-7xl space-grotesk-500"
+					>
+						[Eduardo]
+					</h1>
+					<h2
+						class="text-gray-300 text-base font-normal leading-normal @[480px]:text-lg"
+					>
+						CEO | Senior Developer | Digital Illustrator |
+						University Lecturer
+					</h2>
+				</div>
+				<MainButton>
+					<span class="truncate">Explore My Work</span>
+				</MainButton>
+			</div>
+
+			<div
+				class="px-4 md:px-10 lg:px-20 py-16 @container"
+			>
+				<div class="flex flex-col gap-10">
+					
+					<div class="flex flex-col gap-6 items-start">
+						<div class="flex flex-col gap-4">
+							<h1
+								class="text-gray-800 dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+							>
+								My Expertise
+							</h1>
+							<p
+								class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal max-w-[720px]"
+							>
+								A multi-disciplinary leader and creator, I
+								bridge the gap between executive vision,
+								cutting-edge technology, captivating digital
+								art, and transformative education. My mission is
+								to build innovative solutions and inspire the
+								next generation of creators.
+							</p>
+						</div>
+						<button
+							class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#d41132] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] w-fit hover:bg-red-700 transition-colors"
+						>
+							<span class="truncate">Get in Touch</span>
+						</button>
+					</div>
+
+					<div
+						class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+					>
+						<SkillCard
+							title="CEO"
+							description="Driving strategic vision, fostering innovation, and leading high-performing teams to achieve ambitious business goals."
+							icon="briefcase"
+						/>
+						<SkillCard
+							title="Developer"
+							description="Expert in full-stack development, game engineering, and software architecture, creating robust and scalable applications."
+							icon="code"
+						/>
+						<SkillCard
+							title="Illustrator"
+							description="Creating compelling visual narratives and character designs with a unique anime and dark-punk aesthetic."
+							icon="paintbrush"
+						/>
+						<SkillCard
+							title="Lecturer"
+							description="Sharing knowledge in computer science and digital arts, mentoring students to unlock their creative and technical potential."
+							icon="building-columns"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<Footer />
 </Layout>

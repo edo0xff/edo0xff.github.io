@@ -1,0 +1,21 @@
+---
+const { title, description, icon } = Astro.props;
+---
+
+<div
+    class="flex flex-1 gap-4 rounded-xl border border-[#d41132]/20 dark:border-[#d41132]/30 bg-background-light dark:bg-black/20 p-6 flex-col hover:border-[#d41132] transition-all duration-300 transform hover:-translate-y-1"
+>
+    <i class={`fa-solid fa-${icon}`}></i>
+    <div class="flex flex-col gap-1">
+        <h2
+            class="text-gray-800 dark:text-white text-lg font-bold leading-tight"
+        >
+            {title}
+        </h2>
+        <p
+            class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal"
+        >
+            {description}
+        </p>
+    </div>
+</div>

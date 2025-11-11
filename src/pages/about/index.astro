@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/molecules/Navbar.astro";
+import Footer from "../../components/molecules/Footer.astro";
+import MainButton from "../../components/atoms/MainButton.astro";
+import TimelineItem from "../../components/atoms/TimelineItem.astro";
+---
+
+<Layout>
+    <Navbar />
+
+    <main class="@container mt-20">
+        <div class="@[480px]:p-4">
+            <div
+                class="flex min-h-[580px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                data-alt="An anime-style illustration of a person with professional and punk elements, set against a dark, gritty background."
+                style='background-position:; background-image: linear-gradient(rgba(17, 1, 4, 0.5) 0%, rgba(34, 16, 19, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFNvJ29TRymVFmeydPqwA3NCmWc3S7eapIeA2Fy_-dEVSVS7u64fkU8KOv9d74I_7vZvP916CaKzCxuMpFS73d1z6NjDDJrbYjMPiF12baE7YCxmOVOXP0Ra2yqCUkB1N0uouN6xMMpl8zmGnztmO833L_HFOwDHobzAFksE5hFgQrzAJsY2oxTB7K1XROzVkgkiwT9xFx_DWQtZ844mW65r0BOkNiG01AuWcZN6HqskhYKl0aQ-NL97HuqeJ8MGzOXRPJKzrzEgU");'
+            >
+                <div class="flex flex-col gap-2 text-center">
+                    <h1
+                        class="text-white text-5xl font-black leading-tight tracking-widest @[480px]:text-7xl space-grotesk-500"
+                    >
+                        [About me]
+                    </h1>
+                    <h2
+                        class="text-gray-300 text-base font-normal leading-normal @[480px]:text-lg"
+                    >
+                        A passionate and experienced professional with a love
+                        for technology, art, and education.
+                    </h2>
+                </div>
+                <div class="flex-wrap gap-3 flex justify-center">
+                    <MainButton>
+                        <span class="truncate">View My Work</span>
+                    </MainButton>
+                    <MainButton>
+                        <span class="truncate">Contact Me</span>
+                    </MainButton>
+                </div>
+            </div>
+
+            <div class="px-4 pb-3 pt-5">
+                <h2
+                    class="text-slate-800 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]"
+                >
+                    Career Journey
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 px-4 py-5">
+                <TimelineItem title="Freelancer developer" period="2015 - 2020" icon="code" />
+                <TimelineItem title="Lecturer at UMB" period="2018 - Present" icon="building-columns" />
+                <TimelineItem title="CEO at Pandita Studio" period="2020 - Present" icon="briefcase" />
+                <TimelineItem title="Freelancer illustrator" period="2024 - Present" icon="paintbrush" line={false} />
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>

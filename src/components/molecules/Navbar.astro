@@ -1,0 +1,54 @@
+---
+import Image from "astro/components/Image.astro"
+---
+
+<header
+    class="fixed top-0 left-0 right-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm"
+>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+            class="flex items-center justify-between h-20 border-b border-[#E0E0E0]/20 dark:border-[#d41132]/30"
+        >
+            <div class="flex items-center gap-4">
+                <Image
+                    src="https://panditastudio.com/image/user/edo.png"
+                    alt="Logo"
+                    width="40"
+                    height="40"
+                    class="h-10 w-10 rounded-full"
+                />
+                <h2 class="text-lg font-bold tracking-wider space-grotesk-500">
+                    Eduardo's Portfolio
+                </h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a
+                    class="text-sm font-medium hover:text-[#d41132] transition-colors"
+                    href="/">Home</a
+                >
+                <a
+                    class="text-sm font-medium hover:text-[#d41132] transition-colors"
+                    href="/about">About</a
+                >
+                <a
+                    class="text-sm font-medium hover:text-[#d41132] transition-colors"
+                    href="#">Projects</a
+                >
+                <a
+                    class="text-sm font-medium hover:text-[#d41132] transition-colors"
+                    href="#">Blog</a
+                >
+                <a class="text-sm font-medium text-[#d41132]" href="#">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center justify-center rounded-lg h-10 w-10 border border-transparent hover:cursor-pointer hover:text-[#d41132] hover:border-[#d41132] transition-colors"
+                    onclick="document.documentElement.classList.toggle('dark')"
+                >
+                    <i class="fa-solid fa-moon dark:hidden!"></i>
+                    <i class="fa-solid fa-sun hidden! dark:inline!"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
